@@ -13,7 +13,7 @@ variable "CustomImageProjectId" {
 variable "CustomImageSize" {
 	default = 30
 	description = "Size of the image when expanded"
-	type = nmumber
+	type = number
 }
 
 variable "Eth0PrivateIpAddress" {
