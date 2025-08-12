@@ -1,3 +1,15 @@
+variable "CustomImageFamilyName" {
+	default = "ubuntu-1804-lts"
+	description = "Group of images to which image belongs"
+	type = string
+}
+
+variable "CustomImageProjectId" {
+	default = "ubuntu-os-cloud"
+	description = "Globally unique identifier for image source project"
+	type = string
+}
+
 variable "Eth0PrivateIpAddress" {
 	default = "10.0.10.11"
 	type = string
@@ -51,18 +63,6 @@ MachineType must be one of the following types:
 	c2-standard-4, c2-standard-8, c2-standard-16
 		EOF
 	}
-}
-
-variable "MarketplaceImageName" {
-	default = "ixia-virtual-test-appliance-11-00-0-634"
-	description = "Identifier for image"
-	type = string
-}
-
-variable "MarketplaceImageProjectId" {
-	default = "mpi-keysight-public"
-	description = "Globally unique identifier for image source project"
-	type = string
 }
 
 variable "NetworkTargetTags" {
