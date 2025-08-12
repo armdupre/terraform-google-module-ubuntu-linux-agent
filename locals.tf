@@ -1,6 +1,7 @@
 locals {
 	CustomImageFamilyName = var.CustomImageFamilyName
 	CustomImageProjectId = var.CustomImageProjectId
+	CustomImageSize = var.CustomImageSize
 	Eth0PrivateIpAddress = var.Eth0PrivateIpAddress
 	Eth0PublicIpAddressName = "${local.Preamble}-eth0-ip-addr"
 	Eth0SubnetName = var.Eth0SubnetName

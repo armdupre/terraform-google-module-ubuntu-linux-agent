@@ -10,6 +10,12 @@ variable "CustomImageProjectId" {
 	type = string
 }
 
+variable "CustomImageSize" {
+	default = 30
+	description = "Size of the image when expanded"
+	type = nmumber
+}
+
 variable "Eth0PrivateIpAddress" {
 	default = "10.0.10.11"
 	type = string

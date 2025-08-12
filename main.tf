@@ -19,23 +19,14 @@ resource "google_compute_instance" "Instance" {
 			nat_ip = google_compute_address.Eth0PublicIpAddress.address
 			network_tier = "PREMIUM"
 		}
-		alias_ip_range {
-			ip_cidr_range = local.Eth0PrivateIpAliases
-		}
 	}
 	network_interface {
 		network = data.google_compute_network.Eth1VpcNetwork.self_link
 		network_ip = local.Eth1PrivateIpAddress
 		subnetwork = data.google_compute_subnetwork.Eth1Subnet.self_link
-		access_config {
-			network_tier = "PREMIUM"
-		}
 		alias_ip_range {
 			ip_cidr_range = local.Eth1PrivateIpAliases
 		}
-	}
-	network_performance_config {
-		total_egress_bandwidth_tier	= "TIER_1"
 	}
 	metadata = {
 		Owner = local.UserEmailTag
