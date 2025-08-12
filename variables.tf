@@ -1,5 +1,5 @@
 variable "CustomImageFamilyName" {
-	default = "ubuntu-1804-lts"
+	default = " ubuntu-minimal-2204-lts"
 	description = "Group of images to which image belongs"
 	type = string
 }
