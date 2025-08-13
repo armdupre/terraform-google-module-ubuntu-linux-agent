@@ -32,8 +32,8 @@ resource "google_compute_instance" "Instance" {
 		Owner = local.UserEmailTag
 		Project = local.UserProjectTag
 		serial-port-enable = local.SerialPortEnable
-		user-data = local.init_cli
 	}
+	metadata_startup_script = local.init_cli
 	tags = local.NetworkTargetTags
 	labels = {
 		owner = replace(replace(local.UserEmailTag, ".", "-"), "@", "-")
