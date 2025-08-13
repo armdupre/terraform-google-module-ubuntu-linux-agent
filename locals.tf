@@ -23,16 +23,5 @@ locals {
 	UserProjectTag = var.UserProjectTag
 	Version = var.Version
 	ZoneName = var.ZoneName
-}
-
-locals {
-	startup_script  = <<-EOF
-#!/bin/bash -xe
-apt-get update
-apt-get install -y iperf
-apt-get install -y iperf3
-lshw -class network
-#iperf -s
-#iperf -t 30 -c 10.0.2.116 -P 16
-	EOF
+	init_cli = var.init_cli
 }

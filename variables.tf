@@ -128,3 +128,14 @@ variable "ZoneName" {
 	description = "Deployment area within a region"
 	type = string
 }
+
+variable "init_cli" {
+	default = <<-EOF
+#!/bin/bash -xe
+apt-get update
+apt-get install -y iperf
+apt-get install -y iperf3
+lshw -class network
+	EOF
+	type = string
+}
