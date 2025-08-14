@@ -86,7 +86,7 @@ variable "RegionName" {
 }
 
 variable "Tag" {
-	default = "ixnetwork"
+	default = "ubuntu"
 	description = "App ID tag of application using the deployment"
 	type = string
 }
@@ -118,7 +118,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "11-00"
+	default = "22-04"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
